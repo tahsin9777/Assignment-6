@@ -1,0 +1,15 @@
+.{
+	margin: 0px;
+	padding: 0px;
+
+}
+
+body{
+	margin: 100px;
+}
+.box input{
+	display: block;
+	margin: 5px;
+	border: 1px solid black;
+	padding: 5px;
+}

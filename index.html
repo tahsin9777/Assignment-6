@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<!-- Main Style -->
+
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+
+	<div class="box">
+	<h2>Fill up the form for registration</h2>
+	<h3></h3>
+
+	<input id="name" type="text" placeholder="Name">
+	<input id="email" type="text" placeholder="Email">
+	<input id="cell" type="text" placeholder="Cell">
+	<input id="pass" type="text" placeholder="Password">
+	<button>Click</button>
+</div>
+
+
+
+
+<!-- jQuery Labs-->
+	<script src="assets/js/jquery-3.5.1.min.js"></script>
+	<script>
+
+		$('button').click(function(){
+
+
+			let name = $('#name').val();
+		    let email = $('#email').val();
+		    let cell = $('#cell').val();
+		    let pass = $('#pass').val();
+
+		    if( name == '' || email == '' || cell == '' || pass == '' ){
+		    	$('h3').html('<span style="color:red;">Please fill up all the box</span>');
+
+
+
+		    }else{
+		    	$('h3').html('<span style="color:green;">Your registration is complete</span>');
+
+		    }
+
+		    $('.box input').blur(function(){
+
+		    	let value = $(this).val();
+
+		    	if( value == ''){
+		    		$(this).css('border-color','red');
+
+		    	}else{
+		    		$(this).css('border-color','yellow');
+
+		    	}
+		    });
+
+
+
+		});
+
+		
+
+
+
+	
+
+	</script>
+
+	
+</body>
+</html>
